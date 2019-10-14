@@ -1,0 +1,4 @@
+
+# Ignoramos los modulos al momento de subir los cambios al git
+node_modules/
+.idea/
