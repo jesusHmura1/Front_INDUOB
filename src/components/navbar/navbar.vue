@@ -1,5 +1,5 @@
 <template>
-    <b-navbar toggleable="md" type="dark" variant="info" class="nav-background" >
+    <b-navbar toggleable="md" type="dark" variant="info" class="nav-background">
 
     <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
@@ -13,7 +13,7 @@
 
     <b-navbar-nav class="ml-auto">
         <b-nav-item :to="{name: 'home'}">Inicio</b-nav-item>
-        <b-nav-item :to="{name: 'asdasd'}">Recursos</b-nav-item>
+        <b-nav-item :to="{name: 'recursos'}">Recursos</b-nav-item>
         <b-nav-item :to="{name: 'asdas'}">Quienes Somos</b-nav-item>
         <b-nav-item :to="{name: 'asdasd'}">Ayuda</b-nav-item>
         <b-nav-item :to="{name: 'asdasd'}">Contacto</b-nav-item>
