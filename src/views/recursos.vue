@@ -16,10 +16,9 @@
               <b-card no-body class="overflow-hidden" style="width: 100%; height: 200px; background: #30A8A1;">
                 <b-row no-gutters>
                   <b-col>
-                  </b-col>
-                  <b-col md="6">
-                    
-                        <br>
+                    <tr v-for="documento in documentos" :key = "documento.id">
+                        <a href="http://127.0.0.1:8000/documents/download/5" style="color:#fff" font-size = "100px"><h2>{{documento.titulo}}</h2></a>
+                    </tr>
                   </b-col>
                 </b-row>
               </b-card>
@@ -40,12 +39,27 @@
 
 
 <script>
-export default {
-    name: "Recursos"
-}
+import axios from 'axios'
+    export default {
+        name: "Home",
+        data() {
+          return {
+            documentos:null
+          }
+        },
+        mounted(){
+          this.getTodos();
+        },
+        methods: {
+          getTodos(){
+            axios
+                .get('http://127.0.0.1:8000/documents/')
+                    .then(response =>{
+                        this.documentos = response.data
+                    })
+                    .catch(e => console.log(e))
+                
+          }
+        },
+    }
 </script>
-
-
-<style>
-
-</style>
