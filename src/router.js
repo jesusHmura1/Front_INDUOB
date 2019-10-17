@@ -61,6 +61,11 @@ export default new Router({
       name: 'cuestionarioDeberes',
       path: '/cuestionariodeberes',
       component: () => import('./components/modules/cuestionarioDeberes.vue'),
+    },
+    {
+      name: 'cuestionarioReglamentos',
+      path: '/cuestionarioreglamentos',
+      component: () => import('./components/modules/cuestionarioReglamento.vue'),
     }
   ],
 });

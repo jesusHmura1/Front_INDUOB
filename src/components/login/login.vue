@@ -2,62 +2,63 @@
     <div>
         <b-container>
             <b-row align-h="center" class="mt-5">
-              <b-col cols="5">
-                <b-card class="p-2">
-                    <div>
-                    <p>Hola te damos la bienvenida a induob sistema de induccion para nuevos funcionarios
-                        del departamento de Obstetricia y Puericultura</p>
-                  </div>
-                </b-card>
-                <hr/>
-                <b-card class="p-3">
-                  <h3 class="mb-4">Login</h3>
-                  <b-form @submit="onSubmit" @reset="onReset" v-if="show">
-              <b-form-group id="exampleInputGroup1"
-                            label="Email address:"
-                            label-for="exampleInput1"
+                <b-col cols="5">
+                    <b-card class="p-2">
+                        <div>
+                            <p>Hola te damos la bienvenida a induob sistema de induccion para nuevos funcionarios
+                                del departamento de Obstetricia y Puericultura</p>
+                        </div>
+                    </b-card>
+                    <hr/>
+                    <b-card class="p-3">
+                        <h3 class="mb-4">Login</h3>
+                        <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+                            <b-form-group id="exampleInputGroup1"
+                                          label="Email address:"
+                                          label-for="exampleInput1"
                             >
-                <b-form-input id="exampleInput1"
-                              type="email"
-                              v-model="form.email"
-                              required
-                              placeholder="Enter email">
-                </b-form-input>
-              </b-form-group>
-              <b-form-group id="exampleInputGroup2"
-                            label="Password:"
-                            label-for="exampleInput2">
-                <b-form-input id="exampleInput2"
-                              type="password"
-                              v-model="form.password"
-                              required
-                              placeholder="Enter name">
-                </b-form-input>
-              </b-form-group>
+                                <b-form-input id="exampleInput1"
+                                              type="email"
+                                              v-model="form.email"
+                                              required
+                                              placeholder="Enter email">
+                                </b-form-input>
+                            </b-form-group>
+                            <b-form-group id="exampleInputGroup2"
+                                          label="Password:"
+                                          label-for="exampleInput2">
+                                <b-form-input id="exampleInput2"
+                                              type="password"
+                                              v-model="form.password"
+                                              required
+                                              placeholder="Enter name">
+                                </b-form-input>
+                            </b-form-group>
 
-              <b-form-group id="exampleGroup4">
-                <b-form-checkbox-group v-model="form.checked" id="exampleChecks">
-                  <b-form-checkbox value="remember">Remember me</b-form-checkbox>
-                </b-form-checkbox-group>
-              </b-form-group>
-              <div class="d-flex justify-content-between">
-                <div>
-                  <b-button type="submit" variant="primary">Submit</b-button>&nbsp;
-                  <b-button type="reset" variant="danger">Reset</b-button>
-                </div>
-                <div>
-                  <a href="#" v-b-modal.modal1>Forgot Password</a>
-                </div>
-              </div>
-            </b-form>
-                </b-card>
-              </b-col>
+                            <b-form-group id="exampleGroup4">
+                                <b-form-checkbox-group v-model="form.checked" id="exampleChecks">
+                                    <b-form-checkbox value="remember">Remember me</b-form-checkbox>
+                                </b-form-checkbox-group>
+                            </b-form-group>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <b-button type="submit" variant="primary">Submit</b-button>&nbsp;
+                                    <b-button type="reset" variant="danger">Reset</b-button>
+                                </div>
+                                <div>
+                                    <a href="#" v-b-modal.modal1>Forgot Password</a>
+                                </div>
+                            </div>
+                        </b-form>
+                    </b-card>
+                </b-col>
             </b-row>
-          </b-container>
+        </b-container>
 
-          <b-modal id="modal1" title="Forgot Password">
-              <b-img src="https://ih0.redbubble.net/image.418429827.6579/ap,550x550,12x16,1,transparent,t.u4.png" fluid alt="Responsive image" />
-            </b-modal>
+        <b-modal id="modal1" title="Forgot Password">
+            <b-img src="https://ih0.redbubble.net/image.418429827.6579/ap,550x550,12x16,1,transparent,t.u4.png" fluid
+                   alt="Responsive image"/>
+        </b-modal>
     </div>
 </template>
 
@@ -66,61 +67,63 @@
         name: "login",
         data() {
             return {
-              items: [
-                  { isActive: true, age: 40, first_name: 'Dickerson', last_name: 'Macdonald' },
-                  { isActive: false, age: 21, first_name: 'Larsen', last_name: 'Shaw' },
-                  { isActive: false, age: 89, first_name: 'Geneva', last_name: 'Wilson' },
-                  { isActive: true, age: 38, first_name: 'Jami', last_name: 'Carney' }
+                items: [
+                    {isActive: true, age: 40, first_name: 'Dickerson', last_name: 'Macdonald'},
+                    {isActive: false, age: 21, first_name: 'Larsen', last_name: 'Shaw'},
+                    {isActive: false, age: 89, first_name: 'Geneva', last_name: 'Wilson'},
+                    {isActive: true, age: 38, first_name: 'Jami', last_name: 'Carney'}
                 ],
-              showDismissibleAlert: false,
-              form: {
-                email: '',
-                password: '',
-                food: null,
-                checked: []
-              },
-              foods: [
-                { text: 'Select One', value: null },
-                'Carrots', 'Beans', 'Tomatoes', 'Corn'
-              ],
-              show: true
+                showDismissibleAlert: false,
+                form: {
+                    email: '',
+                    password: '',
+                    food: null,
+                    checked: []
+                },
+                foods: [
+                    {text: 'Select One', value: null},
+                    'Carrots', 'Beans', 'Tomatoes', 'Corn'
+                ],
+                show: true
             }
-          },
-          methods: {
+        },
+        methods: {
             handleClick() {
-              this.showDismissibleAlert = true
+                this.showDismissibleAlert = true
             },
-            onSubmit (evt) {
-              evt.preventDefault();
-              alert(JSON.stringify(this.form));
+            onSubmit(evt) {
+                evt.preventDefault();
+                alert(JSON.stringify(this.form));
             },
 
-            onReset (evt) {
-              evt.preventDefault();
-              /* Reset our form values */
-              this.form.email = '';
-              this.form.password = '';
-              this.form.food = null;
-              this.form.checked = [];
-              /* Trick to reset/clear native browser form validation state */
-              this.show = false;
-              this.$nextTick(() => { this.show = true });
+            onReset(evt) {
+                evt.preventDefault();
+                /* Reset our form values */
+                this.form.email = '';
+                this.form.password = '';
+                this.form.food = null;
+                this.form.checked = [];
+                /* Trick to reset/clear native browser form validation state */
+                this.show = false;
+                this.$nextTick(() => {
+                    this.show = true
+                });
             }
-          }
+        }
     }
 
 </script>
 
 <style>
-  @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+    @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 
-  body {
-    background: #EEF1F4 !important;
-    font-family: 'Lato', sans-serif !important;
-  }
+    body {
+        background: #EEF1F4 !important;
+        font-family: 'Lato', sans-serif !important;
+    }
 
-  .nav-background {
-    background: #353535;
-  }
+    .nav-background {
+        background: #353535;
+    }
 </style>
 
