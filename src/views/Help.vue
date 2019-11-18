@@ -144,7 +144,7 @@
 
 <script>
     export default {
-        name: "about"
+        name: "help"
     }
 </script>
 

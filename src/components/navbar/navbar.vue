@@ -14,9 +14,9 @@
     <b-navbar-nav class="ml-auto">
         <b-nav-item :to="{name: 'home'}">Inicio</b-nav-item>
         <b-nav-item :to="{name: 'recursos'}">Recursos</b-nav-item>
-        <b-nav-item :to="{name: 'asdas'}">Quienes Somos</b-nav-item>
-        <b-nav-item :to="{name: 'asdasd'}">Ayuda</b-nav-item>
-        <b-nav-item :to="{name: 'asdasd'}">Contacto</b-nav-item>
+        <b-nav-item :to="{name: 'about'}">Quienes Somos</b-nav-item>
+        <b-nav-item :to="{name: 'help'}">Ayuda</b-nav-item>
+        <b-nav-item :to="{name: 'contact'}">Contacto</b-nav-item>
       <b-nav-item-dropdown right>
         <template slot="button-content">
           <em>User</em>

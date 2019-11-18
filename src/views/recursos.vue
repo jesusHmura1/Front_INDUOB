@@ -3,11 +3,11 @@
 <template>
   <div style="margin-top: 40px; margin-left: 20px; margin-right: 20px; margin-; border-radius:25px;">
      <div style="weight: 100px; height: 1000px">
-      
+
        <h1 style="color:#fff;">Recursos</h1>
-      
+
       <b-card>
-        
+
         <h2 style="color:#30A8A1">Con estos documentos cuentas:</h2>
 
          <b-row class="justify-content-md-center">
@@ -23,17 +23,17 @@
                 </b-row>
               </b-card>
             </div>
-          </b-col>          
+          </b-col>
         </b-row>
 
 
-        
+
 
       </b-card>
 
      </div>
-     
-      
+
+
   </div>
 </template>
 
@@ -57,8 +57,8 @@ import axios from 'axios'
                     .then(response =>{
                         this.documentos = response.data
                     })
-                    .catch(e => console.log(e))
-                
+                    .catch(e => this.console.log(e))
+
           }
         },
     }
