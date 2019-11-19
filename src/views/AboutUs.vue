@@ -4,15 +4,15 @@
             <div class="container py-5">
                 <div class="row h-100 align-items-center py-5">
                     <div class="col-lg-6">
-                        <h1 class="display-4">About us page</h1>
-                        <p class="lead text-muted mb-0">Create a minimal about us page using Bootstrap 4.</p>
-                        <p class="lead text-muted">Snippet by <a href="https://bootstrapious.com/snippets"
+                        <h1 class="display-4">Sobre nosotros</h1>
+                        <p class="lead text-muted mb-0">{{init_messge}}</p>
+                        <p class="lead text-muted">Saber mas en <a href="http://www.fcm.usach.cl/escuela-de-obstetricia-y-puericultura"
                                                                  class="text-muted">
-                            <u>Bootstrapious</u></a>
+                            <u>facultad de obstetrica y puericultura USACH</u></a>
                         </p>
                     </div>
                     <div class="col-lg-6 d-none d-lg-block"><img
-                            src="https://res.cloudinary.com/mhmd/image/upload/v1556834136/illus_kftyh4.png" alt=""
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Escudo_de_la_Universidad_de_Santiago-4.svg/1200px-Escudo_de_la_Universidad_de_Santiago-4.svg.png" alt=""
                             class="img-fluid"></div>
                 </div>
             </div>
@@ -144,9 +144,17 @@
 
 <script>
     export default {
-        name: "about"
+        name: "about",
+        data() {
+            return {
+                init_messge: 'La honorable escuela de obstetricia de la universidad de santiago dde chile tiene ' +
+                             'mas de 150 años enseñando las mejores practicas para sus alumnos y docentes',
+                modulos: null
+            }
+        }
     }
 </script>
+
 
 <style scoped>
 
